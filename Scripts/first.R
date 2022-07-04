@@ -134,3 +134,23 @@ y<-c("a","b")
 for(i in seq_along(y)){
   print(y[i])
 }
+
+#while
+count<-0
+while(count<10){
+  print(count)
+  count<- count+1
+}
+
+z<-5
+i<-1
+while(z>=3 && z<=10){
+  print(paste(as.character(i),as.character(z)))
+  i<-i+1
+  coin <-rbinom(1,1,0.5)
+  if(coin==1){
+    z<-z+1
+  } else {
+    z<-z-1
+  }
+}

@@ -35,3 +35,18 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+z<-5
+i<-1
+while(z>=3 && z<=10){
+  print(paste(as.character(i),as.character(z)))
+  i<-i+1
+  coin <-rbinom(1,1,0.5)
+  if(coin==1){
+    z<-z+1
+  } else {
+    z<-z-1
+  }
+}
+```

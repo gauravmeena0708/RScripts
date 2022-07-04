@@ -400,6 +400,21 @@ chunk like this:</p>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the
 code chunk to prevent printing of the R code that generated the
 plot.</p>
+<pre class="r"><code>z&lt;-5
+i&lt;-1
+while(z&gt;=3 &amp;&amp; z&lt;=10){
+  print(paste(as.character(i),as.character(z)))
+  i&lt;-i+1
+  coin &lt;-rbinom(1,1,0.5)
+  if(coin==1){
+    z&lt;-z+1
+  } else {
+    z&lt;-z-1
+  }
+}</code></pre>
+<pre><code>## [1] &quot;1 5&quot;
+## [1] &quot;2 4&quot;
+## [1] &quot;3 3&quot;</code></pre>
 </div>
 
 
