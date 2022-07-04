@@ -154,3 +154,35 @@ while(z>=3 && z<=10){
     z<-z-1
   }
 }
+
+#repeat, break
+#simlar to while(1)
+#next is skip
+
+
+#function
+add2 <- function(x,y){
+  x+y
+}
+print(add2(1,2))
+
+above10 <-function(x){
+  x[x>10]
+}
+above10(1:13)
+
+above <-function(x,n=10){
+  x[x>n]
+}
+above(1:13,5)
+above(1:13)
+
+columnmean <- function(y, removeNA=T){
+  nc<-ncol(y)
+  means<-numeric(nc)
+  for (i in 1:nc){
+    means[i]<-mean(y[,i],na.rm=removeNA)
+  }
+  means
+}
+columnmean(airquality)
