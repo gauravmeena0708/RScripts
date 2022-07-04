@@ -106,3 +106,31 @@ x[c(1,3)]
 x$baz
 name<-"foo"
 x[[name]] #[[]] can be used for assigned variable
+x[[2]][[1]] #specific position
+x[[c(2,1)]]
+
+#matrix
+x<-matrix(1:6,2,3)
+x[1,2]
+x[1,]
+x[,1]
+
+#removing NA
+x<-c(1,2,NA,4,5)
+good<-complete.cases(x)
+good
+x[good]
+x<-2
+if(x>3){
+  print("greater")
+} else {
+  print("lesser")
+}
+
+for(i in 1:10){
+  print(i)
+}
+y<-c("a","b")
+for(i in seq_along(y)){
+  print(y[i])
+}
