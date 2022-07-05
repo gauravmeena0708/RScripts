@@ -186,3 +186,25 @@ columnmean <- function(y, removeNA=T){
   means
 }
 columnmean(airquality)
+
+
+#extending functions
+x<-function(x, y, type="l",...){
+  plot(x,y,type,...)
+}
+
+#this is how read.table converts into read.csv
+args(x)
+args(paste)
+args(cat)
+
+#R returns function
+make.power<-function(n){
+  pow<-function(x){
+    x^n
+  }
+}
+cube <-make.power(3)
+square <-make.power(2)
+cube(5)
+square(5)
