@@ -242,4 +242,8 @@ lapply(x,runif, min=0, max=10)
 x<-matrix(rnorm(200),20,10)
 apply(x,1, mean)
 apply(x,2,sum)
+#rowSums, rowMeans colSums colMeans
 
+
+#debugging tools
+#traceback, debug, browser, trace, recover
