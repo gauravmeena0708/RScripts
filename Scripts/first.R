@@ -208,3 +208,38 @@ cube <-make.power(3)
 square <-make.power(2)
 cube(5)
 square(5)
+
+ls(environment(cube))
+get("n",environment(cube))
+get("n",environment(square))
+
+#date and time
+x<-as.Date("1970-01-02")
+x
+unclass(x)
+
+y<- Sys.time()
+p<-as.POSIXlt(y)
+names(unclass(p))
+p$sec
+p$min
+p$mon
+p$year
+
+
+dates<-c("January 29, 2021 10:40","December 21, 2021 10:40")
+z<-strptime(dates,"%B %d, %Y %H:%M")
+z
+
+#loop functions
+#lapply, sapply, apply, tapply, mapply
+
+x<-list(a=1:5, b=1:10, c=rnorm(10))
+lapply(x,mean)
+lapply(x,runif)
+lapply(x,runif, min=0, max=10)
+ 
+x<-matrix(rnorm(200),20,10)
+apply(x,1, mean)
+apply(x,2,sum)
+
