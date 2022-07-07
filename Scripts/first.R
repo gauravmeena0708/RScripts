@@ -246,4 +246,9 @@ apply(x,2,sum)
 
 
 #debugging tools
+
 #traceback, debug, browser, trace, recover
+
+
+#random numbers
+#dnorm, pnorm, rnorm, qnorm
